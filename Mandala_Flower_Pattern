@@ -1,0 +1,18 @@
+import turtle
+import colorsys
+
+t = turtle.Turtle()
+t.speed(0)
+turtle.bgcolor("black")
+t.width(2)
+
+hue = 0
+for i in range(36):
+    t.color(colorsys.hsv_to_rgb(hue, 1, 1))
+    for _ in range(6):
+        t.forward(100)
+        t.left(60)
+    t.left(10)
+    hue += 0.028
+
+turtle.done()
